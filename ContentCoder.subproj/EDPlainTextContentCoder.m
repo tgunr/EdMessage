@@ -48,7 +48,7 @@
     if(([[[mpart contentType] firstObject] isEqualToString:@"text"] == NO) ||
        ([[[mpart contentType] secondObject] isEqualToString:@"plain"] == NO))
         return NO;
-#warning * maybe we should allow text/enriched and dump the formatting...    
+	//FIXME: maybe we should allow text/enriched and dump the formatting...    
 
     charset = [[mpart contentTypeParameters] objectForKey:@"charset"];
     if((charset != nil) && ([NSString stringEncodingForMIMEEncoding:charset] == 0))

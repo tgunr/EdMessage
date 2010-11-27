@@ -209,7 +209,7 @@
                     pos1 = [[marker secondObject] intValue];
                     [text applyFontTraits:NSItalicFontMask range:NSMakeRange(pos1, [text length] - pos1)];
                     }
-#warning * a lot of tags are missing and bug with bold and italic
+					// FIXME: a lot of tags are missing and bug with bold and italic
                 /* If you add more tags please take note that the current attribute handling model is extremely simple and applies the changes when the endmarker is reached, i.e. in reverse order. As bold and italic are not exclusive this works for the moment... Actually, it doesn't work at all because the attributes of the last character are applied to appended strings. Hence, we do need a two-pass approach!  */
                 }
             }

@@ -178,7 +178,7 @@
        }
     
     [result setContentTransferEncoding:MIMEBase64ContentTransferEncoding];
-
+	NSUInteger size = [data length];
     [result setContentData:data];
 
     return result;

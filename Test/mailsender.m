@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
-    EDMailAgent *mailAgent = [EDMailAgent mailAgentForRelayHostWithName:@"mail.mulle-kybernetik.com" port:25];
+    EDMailAgent *mailAgent = [EDMailAgent mailAgentForRelayHostWithName:@"mp.polymicro.net" port:25];
 
 //	[mailAgent setUsesSecureConnections:YES];
 //

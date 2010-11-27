@@ -234,7 +234,10 @@ NSString *EDMailSubject = @"Subject";
 }
 
 
-/*" This flag is only relevant for secure connections. If set to YES the mail agent will accept connections even if the counterparty's certificate is expired. This means an important aspect of the security protocol is ignored. "*/
+/*" This flag is only relevant for secure connections. 
+ If set to YES the mail agent will accept connections even if the 
+ counterparty's certificate is expired. This means an important aspect 
+ of the security protocol is ignored. "*/
 
 - (void)setAllowsExpiredCertificates:(BOOL)allowed
 {
@@ -249,7 +252,8 @@ NSString *EDMailSubject = @"Subject";
 }
 
 
-/*" Sets the authentication information. The dictionary should contain values for the following keys: EDSMTPUserName, EDSMTPPassword. "*/
+/*" Sets the authentication information. The dictionary should contain values for the following 
+ keys: EDSMTPUserName, EDSMTPPassword. "*/
 
 - (void)setAuthInfo:(NSDictionary *)infoDictionary
 {
@@ -370,7 +374,8 @@ NSString *EDMailSubject = @"Subject";
 }
 
 
-/*" Calls #{sendMailWithHeaders:body:andAttachments:} with an attachment list containing the attachment %attData with the name %attName. "*/
+/*" Calls #{sendMailWithHeaders:body:andAttachments:} with an attachment list containing the 
+ attachment %attData with the name %attName. "*/
 
 - (void)sendMailWithHeaders:(NSDictionary *)userHeaders body:(NSString *)body andAttachment:(NSData *)attData withName:(NSString *)attName
 {
@@ -378,7 +383,10 @@ NSString *EDMailSubject = @"Subject";
 }
 
 
-/*" Composes and attempts to deliver a mail message. The message is built from the %body and the attachments in %attachmentList. The latter is an array of #EDObjectPairs containing the attachment data and name respectively. The %userHeaders must include at a minimum some recipient specification, e.g. the key "To" with a string value containing the recipient addresses; comma-separated. "*/
+/*" Composes and attempts to deliver a mail message. The message is built from the %body and the attachments in %attachmentList. 
+ The latter is an array of #EDObjectPairs containing the attachment data and name respectively. 
+ The %userHeaders must include at a minimum some recipient specification, e.g. the key "To" with 
+ a string value containing the recipient addresses; comma-separated. "*/
 
 - (void)sendMailWithHeaders:(NSDictionary *)userHeaders body:(NSString *)body andAttachments:(NSArray *)attachmentList
 {
