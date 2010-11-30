@@ -75,25 +75,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		03AAC6310EC9996D0083BD57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03AAC6280EC9996D0083BD57 /* EDCommon.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AD39F33905443F3E0086D411;
-			remoteInfo = EDCommon;
-		};
 		752AFC1F129DA64C0028C23D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 752AFC18129DA64C0028C23D /* EDCommon.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = AD39F33905443F3E0086D411 /* EDCommon.framework */;
+			remoteGlobalIDString = AD39F33905443F3E0086D411;
 			remoteInfo = EDCommon;
 		};
 		752AFC21129DA6670028C23D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 752AFC18129DA64C0028C23D /* EDCommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = AD39F29B05443F3D0086D411 /* EDCommon */;
+			remoteGlobalIDString = AD39F29B05443F3D0086D411;
 			remoteInfo = EDCommon;
 		};
 /* End PBXContainerItemProxy section */
@@ -101,7 +94,6 @@
 /* Begin PBXFileReference section */
 		031A06950E9F14EB00DADB91 /* MailSender */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MailSender; sourceTree = BUILT_PRODUCTS_DIR; };
 		031A069B0E9F154A00DADB91 /* mailsender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mailsender.m; path = Test/mailsender.m; sourceTree = "<group>"; };
-		03AAC6280EC9996D0083BD57 /* EDCommon.xcodeproj */ = {isa = PBXFileReference; explicitFileType = "wrapper.pb-project"; name = EDCommon.xcodeproj; path = Dependencies/edcommon/EDCommon.xcodeproj; sourceTree = SOURCE_ROOT; };
 		03C571FA0E9D1DD50009F0F9 /* EDSecureSMTPStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSecureSMTPStream.h; sourceTree = "<group>"; };
 		03C571FB0E9D1DD50009F0F9 /* EDSecureSMTPStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSecureSMTPStream.m; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -214,17 +206,8 @@
 		03AAC6240EC9993D0083BD57 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				03AAC6280EC9996D0083BD57 /* EDCommon.xcodeproj */,
 			);
 			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		03AAC62E0EC9996D0083BD57 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				03AAC6320EC9996D0083BD57 /* EDCommon.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0867D691FE84028FC02AAC07 /* EDMessage */ = {
@@ -621,10 +604,6 @@
 					ProductGroup = 752AFC19129DA64C0028C23D /* Products */;
 					ProjectRef = 752AFC18129DA64C0028C23D /* EDCommon.xcodeproj */;
 				},
-				{
-					ProductGroup = 03AAC62E0EC9996D0083BD57 /* Products */;
-					ProjectRef = 03AAC6280EC9996D0083BD57 /* EDCommon.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -635,13 +614,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		03AAC6320EC9996D0083BD57 /* EDCommon.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EDCommon.framework;
-			remoteRef = 03AAC6310EC9996D0083BD57 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		752AFC20129DA64C0028C23D /* EDCommon.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -882,7 +854,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../EdCommon/build/Debug/\"";
+				FRAMEWORK_SEARCH_PATHS = /Users/davec/Sources/Build/EdCommon/;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
