@@ -814,7 +814,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = EDMessage_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = EDMessage;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -825,7 +825,6 @@
 			buildSettings = {
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = /;
 				DYLIB_COMPATIBILITY_VERSION = 17;
 				DYLIB_CURRENT_VERSION = 17;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -838,7 +837,6 @@
 				GCC_PREFIX_HEADER = EDMessage_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_MODE_FLAG = "u+w,go-w,o+rX";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x35000000,
@@ -857,6 +855,7 @@
 				FRAMEWORK_SEARCH_PATHS = /Users/davec/Sources/Build/EdCommon/;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Development;
@@ -872,6 +871,7 @@
 				);
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../EdCommon/build/Release/\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Deployment;
