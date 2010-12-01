@@ -18,6 +18,7 @@
 //  OR OF ANY DERIVATIVE WORK.
 //---------------------------------------------------------------------------------------
 
+#import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 

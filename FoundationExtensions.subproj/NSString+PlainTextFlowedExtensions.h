@@ -16,6 +16,7 @@
      DAMAGES WHATSOEVER RESULTING DIRECTLY OR INDIRECTLY FROM THE USE OF THIS SOFTWARE
      OR OF ANY DERIVATIVE WORK.
 */
+#import <Cocoa/Cocoa.h>
 
 @interface NSString(PlainTextFlowedExtensions)
 
