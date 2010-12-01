@@ -738,17 +738,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					ppc,
-					ppc64,
-					i386,
 					x86_64,
+					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/build/Release (embedded)/\"",
-					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = EDMessage;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = "Deployment (embedded)";
@@ -803,59 +801,28 @@
 		1DEB91AE08733DA50010E9CD /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = EDMessage_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "@loader_path/../Frameworks";
-				PRODUCT_NAME = EDMessage;
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Development;
 		};
 		1DEB91AF08733DA50010E9CD /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEPLOYMENT_LOCATION = NO;
-				DEPLOYMENT_POSTPROCESSING = YES;
-				DYLIB_COMPATIBILITY_VERSION = 17;
-				DYLIB_CURRENT_VERSION = 17;
-				FRAMEWORK_SEARCH_PATHS = (
-					Dependencies/edcommon/build/UninstalledProducts,
-					Dependencies/edcommon/build/Release,
-				);
-				FRAMEWORK_VERSION = A;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = EDMessage_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_MODE_FLAG = "u+w,go-w,o+rX";
-				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0x35000000,
-				);
-				PRODUCT_NAME = EDMessage;
-				WARNING_CFLAGS = "-Wmost";
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Deployment;
 		};
 		1DEB91B208733DA50010E9CD /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
-				FRAMEWORK_SEARCH_PATHS = /Users/davec/Sources/Build/EdCommon/;
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
-				INSTALL_PATH = "@loader_path/../Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = EDMessage;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Development;
@@ -864,17 +831,64 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					ppc,
-					ppc64,
-					i386,
 					x86_64,
+					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../EdCommon/build/Release/\"";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = EDMessage;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Deployment;
+		};
+		752E07E612A6046C002C05B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = EDMessage;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		752E07E712A6046C002C05B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		752E07E812A6046C002C05B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MailSender;
+				ZERO_LINK = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -885,6 +899,7 @@
 				031A06970E9F14EB00DADB91 /* Deployment */,
 				03FB44800EBFCBDC00D287F4 /* Deployment (embedded) */,
 				031A06980E9F14EB00DADB91 /* Development */,
+				752E07E812A6046C002C05B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Deployment (embedded)";
@@ -895,6 +910,7 @@
 				1DEB91AF08733DA50010E9CD /* Deployment */,
 				03FB447F0EBFCBDC00D287F4 /* Deployment (embedded) */,
 				1DEB91AE08733DA50010E9CD /* Development */,
+				752E07E712A6046C002C05B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Deployment (embedded)";
@@ -905,6 +921,7 @@
 				1DEB91B308733DA50010E9CD /* Deployment */,
 				03FB447E0EBFCBDC00D287F4 /* Deployment (embedded) */,
 				1DEB91B208733DA50010E9CD /* Development */,
+				752E07E612A6046C002C05B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Deployment (embedded)";
