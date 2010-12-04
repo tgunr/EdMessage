@@ -738,8 +738,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					x86_64,
+					ppc,
+					ppc64,
 					i386,
+					x86_64,
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)/\"",
