@@ -741,10 +741,13 @@
 					x86_64,
 					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)/\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INSTALL_PATH = "@loader/../Frameworks";
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = EDMessage;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
@@ -817,7 +820,9 @@
 					x86_64,
 					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)/\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -834,7 +839,9 @@
 					x86_64,
 					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)/\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -851,7 +858,9 @@
 					x86_64,
 					i386,
 				);
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../EdCommon/build/Release (embedded)/\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
